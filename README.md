@@ -66,15 +66,29 @@ Lucide Icons: ใช้สัญญาอนุญาตแบบ ISC (ฟรี
 
 แม้ว่าแอปนี้จะรันได้ด้วยไฟล์เดียว แต่หากคุณนำไปพัฒนาต่อด้วย Vite หรือ Create React App คุณสามารถสร้างไฟล์ utils.test.js เพื่อรันร่วมกับ Jest ได้ดังนี้:
 
-// utils.test.js
-import { getWeatherInfo, isValidCityName } from './WeatherApp';
+---
 
-describe('Weather Utility Functions', () => {
-  test('getWeatherInfo ควรคืนค่า "ท้องฟ้าแจ่มใส" สำหรับรหัส 0', () => {
-    expect(getWeatherInfo(0).desc).toBe('ท้องฟ้าแจ่มใส');
-  });
+## 🚀 วิธีการติดตั้งและรันบนเครื่องของคุณ (How to Run)
 
-  test('isValidCityName ควรคืนค่า false เมื่อไม่ได้พิมพ์ข้อความ', () => {
-    expect(isValidCityName('   ')).toBe(false);
-  });
-});
+หากคุณต้องการรันแอปพลิเคชันนี้บนเครื่องคอมพิวเตอร์ของคุณ ให้ทำตามขั้นตอนดังนี้:
+
+### 1. เตรียมความพร้อม
+ตรวจสอบว่าเครื่องของคุณติดตั้ง **Node.js** เรียบร้อยแล้ว (แนะนำเวอร์ชัน 18 ขึ้นไป)
+
+### 2. ติดตั้ง Dependencies
+เปิด Terminal ในโฟลเดอร์โปรเจกต์แล้วรันคำสั่ง:
+```bash
+npm install
+```
+
+### 3. รันโปรเจกต์ (Development Mode)
+รันคำสั่งเพื่อเริ่มระบบ Local Server:
+```bash
+npm run dev
+```
+หลังจากรันเสร็จ คุณจะเห็น URL (เช่น `http://localhost:5173`) ให้เปิด URL นั้นในเบราว์เซอร์เพื่อใช้งานแอป
+
+### 4. การตรวจสอบ Unit Tests
+เมื่อแอปโหลดขึ้นมา ให้กด **F12** เพื่อเปิด **Developer Tools** และเลือกแท็บ **Console** คุณจะพบผลการทดสอบ Unit Tests ที่รันอัตโนมัติ
+
+---
